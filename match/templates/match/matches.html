@@ -1,0 +1,54 @@
+{% extends 'match/base.html' %}
+
+{% block content %}
+<div class="matches">
+    <h1>Premier League</h1>
+</div>
+
+<div class="res-table">
+<table class="matches-table">
+    <tr>
+        <th >Date</th>
+        <th >Opponents</th>
+        <th >Score</th>
+        <th >Status</th>
+    </tr>
+    {% for match in matches %}
+    <tr>
+        <td>{{ match.formatted_day }}.{{ match.formatted_month }}.{{ match.date.year}}</td>
+        <div class="home-team">
+            <td>
+            <img src="{{ match.logo_home }}" alt="Home Team Logo" class="team-logo">
+            <span class="team-name"><a href="{{ match.home_team.get_absolute_url  }}">{{ match.home_team.short_name }}</a></span>
+        </div>
+            
+        <div class="away-team">
+            <img src="{{ match.logo_away }}" alt="Away Team Logo" class="team-logo">
+            <span class="team-name"><a href="{{ match.away_team.get_absolute_url }}">{{ match.away_team.short_name }}</a></span>
+            <td><div class="score">{{ match.score_home }}:{{ match.score_away }}</div></td>                
+        </div>
+        </td>
+        <td><div class="status">{{ match.status }}</div></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<table class="standing">
+    <tr>
+        <th>Position</th>
+        <th>Team</th>
+        
+        <th>Played Games</th>
+        <th>Won</th> 
+    </tr>
+    {% for st in standings %}
+    <tr><td>{{ st.position }}</td>
+        <td><img src="{{ st.team.logo }}" class="team-logo"><a href="{{ st.team.get_absolute_url }}">{{ st.name_team }}</a></td>
+        
+        <td>{{ st.played_games }}</td>
+        <td>{{ st.won }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}
