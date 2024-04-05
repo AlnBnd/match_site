@@ -1,0 +1,47 @@
+{% extends 'match/base.html' %}
+
+{% block content %}
+
+<div class="team">
+    <h1 class="team-name">{{ team.name_team }}</h1>
+    <img class="team-logo" src="{{ team.logo }}">
+</div>
+<div class="table-container">
+    <h2>Coach</h2>
+    <table class="table-wrapper">
+        <tr>
+            <th>Name</th>
+            <th>Birth date</th>
+            <th>Nationality</th>
+            <th>Contract start</th>
+            <th>Contract end</th>
+        </tr>
+        <tr>
+            <td>{{ coach.name }}</td>
+            <td>{{ coach.date_of_birth }}</td>
+            <td>{{ coach.nationality }}</td>
+            <td>{{ coach.contract_start }}</td>
+            <td>{{ coach.contract_end }}</td>
+        </tr>
+    </table>
+</div>
+<div class="table-container">
+    <h2>Players</h2>
+    <table class="table-wrapper">
+            <tr>
+                <th>Name</th>
+                <th>Birth date</th>
+                <th>Nationality</th>
+                <th>Position</th>
+            </tr>
+            {% for player in players %}
+            <tr>
+                <td>{{ player.name }}</td>
+                <td>{{ player.date_of_birth }}</td>
+                <td>{{ player.nationality }}</td>
+                <td>{{ player.position }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+</div>
+{% endblock %}

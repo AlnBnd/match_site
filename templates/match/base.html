@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PREMIER LEAGUE</title>
+</head>
+<body>
+    <table class="table-content" border=0 cellpadding="0" cellspacing="0">
+<link rel="stylesheet" href="{% static 'match/css/style.css' %}">
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>
