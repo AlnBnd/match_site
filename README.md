@@ -27,7 +27,7 @@
 ### Установка и настройка
 1. Для изоляции зависимостей проекта рекомендуется использовать виртуальное окружение.
 ```bash
-python -m venv venv
+python3 -m venv venv
 ```
    Запуск виртуального окружения:
 
@@ -45,7 +45,7 @@ git clone
 ```
 3 Установите зависимости:
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 4. Для безопасного необходимо SECRET_KEY добавить в `.env` файл, который создаётся в Django проекте. Так же нужно получит API_KEY c сайта https://www.football-data.org, API_KEY нужно добавить в `.env`
 ```
@@ -54,7 +54,7 @@ API_KEY=ваш_api_ключ_с_сайта_football_data
 ```
 6. Настройте базу данных и выполните миграции:
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
   Эта команда создаст необходимые таблицы в базе данных согласно моделям приложений Django.
 6. Установка и запуск Redis на локальном устройстве:
@@ -63,6 +63,6 @@ redis-server
 ```
 6. Запустите сервер разработки:
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 При каждом запуске сервера информация о матчах будет обновляться автоматически благодаря воркерам Django Celery, запущенным через django-extensions.
