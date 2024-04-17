@@ -54,7 +54,7 @@ API_KEY=ваш_api_ключ_с_сайта_football_data
 ```
 6. Настройте базу данных и выполните миграции:
 ```bash
-python3 manage.py migrate
+python manage.py migrate
 ```
   Эта команда создаст необходимые таблицы в базе данных согласно моделям приложений Django.
 6. Установка и запуск Redis на локальном устройстве:
@@ -63,6 +63,6 @@ redis-server
 ```
 6. Запустите сервер разработки:
 ```bash
-python3 manage.py runserver
+python manage.py runserver
 ```
 При каждом запуске сервера информация о матчах будет обновляться автоматически благодаря воркерам Django Celery, запущенным через django-extensions.
