@@ -52,7 +52,7 @@ pip install -r requirements.txt
 SECRET_KEY=ваш_секретный_ключ_django
 API_KEY=ваш_api_ключ_с_сайта_football_data
 ```
-6. Настройте базу данных и выполните миграции:
+5. Настройте базу данных и выполните миграции:
 ```bash
 python manage.py migrate
 ```
@@ -61,7 +61,7 @@ python manage.py migrate
 ```
 redis-server
 ```
-6. Запустите сервер разработки:
+7. Запустите сервер разработки:
 ```bash
 python manage.py runserver
 ```
