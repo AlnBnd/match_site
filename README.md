@@ -45,7 +45,7 @@ git clone
 ```
 3 Установите зависимости:
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 4. Для безопасного необходимо SECRET_KEY добавить в `.env` файл, который создаётся в Django проекте. Так же нужно получит API_KEY c сайта https://www.football-data.org, API_KEY нужно добавить в `.env`
 ```
