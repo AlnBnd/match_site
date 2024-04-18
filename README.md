@@ -33,11 +33,11 @@ python -m venv venv
 
 Windows:
 ```bash
-.\djvenv\Scripts\activate
+.\venv\Scripts\activate
 ```
 Linux\macOS:
 ```bash
-source djvenv/bin/activate
+source venv/bin/activate
 ```
 2. Клонируйте проект:
 ```bash
